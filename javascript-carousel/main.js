@@ -108,3 +108,4 @@ function resetTimer() {
   clearInterval(timer);
   timer = setInterval($handleNextIcon, 3000);
 }
+// asdfafda
