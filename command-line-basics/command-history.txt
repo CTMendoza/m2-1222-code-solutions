@@ -1,0 +1,369 @@
+    1  git switch main
+    2  git branch --list
+    3  git branch javascript-custom-methods
+    4  git branch --list
+    5  git switch javascript-custom-methods
+    6  git status
+    7  git status
+    8  git status
+    9  git status
+   10  git add javascript-custom-methods
+   11  git status
+   12  git commit -m "Completed javascript-custom-methods"
+   13  git push origin javascript-custom-methods
+   14  g
+   15  git status
+   16  git push origin javascript-custom-methods
+   17  git status
+   18  git switch main
+   19  git pull origin main
+   20  git status
+   21  git status
+   22  git branch --list
+   23  git branch javascript-this
+   24  git branch --list
+   25  git switch javascript-this
+   26  git status
+   27  git status
+   28  git status
+   29  git add javascript-this
+   30  git status
+   31  git commit -m "Completed javascript-this"
+   32  git status
+   33  git push origin javascript-this
+   34  git status
+   35  git switch main
+   36  git pull origin main
+   37  git status
+   38  git status
+   39  git branch --list
+   40  git branch javascript-prototypes
+   41  git branch --list
+   42  git switch javascript-prototypes
+   43  git status
+   44  git status
+   45  git add javascript-prototypes
+   46  git status
+   47  git commit -m "Completed javascript-prototypes"
+   48  git status
+   49  git push origin javascript-prototypes
+   50  git status
+   51  git switch main
+   52  git pull origin main
+   53  git status
+   54  git branch --list
+   55  git branch javascript-constructors
+   56  git branch --list
+   57  git switch javascript-constructors
+   58  git status
+   59  git status
+   60  git add javascript-constructors
+   61  git status
+   62  git commit -m "Completed javascript-constructors"
+   63  git status
+   64  git status
+   65  git status
+   66  git push origin javascript-constructors
+   67  git status
+   68  git switch main
+   69  git status
+   70  git pull origin main
+   71  git status
+   72  git branch --list
+   73  git branch javascript-bank
+   74  git branch --list
+   75  git switch javascript-bank
+   76  git status
+   77  git status
+   78  git add javascript-bank
+   79  git status
+   80  git commit -m "Completed javascript-bank"
+   81  git status
+   82  git push origin javascript-bank
+   83  git status
+   84  git switch main
+   85  git status
+   86  git pull origin main
+   87  git status
+   88  git branch --list
+   89  git branch javascript-timers
+   90  git branch --list
+   91  git switch javascript-timers
+   92  gi tstatus
+   93  git status
+   94  git status
+   95  git add javascript-timers
+   96  git status
+   97  git commit -m "Completed javascript-timers"
+   98  git push origin javascript-timers
+   99  git status
+  100  git switch main
+  101  git status
+  102  git branch --list
+  103  git branch javascript-carousel
+  104  git branch --list
+  105  git switch javascript-carousel
+  106  git status
+  107  git status
+  108  git status
+  109  git add javascript-carousel
+  110  git status
+  111  git commit -m "Completed javascript-carousel"
+  112  git commit -m "Completed javascript-carousel" --no-verify
+  113  git status
+  114  git push origin javascript-carousel
+  115  git push origin javascript-carousel
+  116  git status
+  117  git status
+  118  git push origin javascript-carousel
+  119  git status
+  120  git add javascript-carousel
+  121  git status
+  122  git commit -m "Completed javascript-carousel"
+  123  git push origin javascript-carousel
+  124  git switch main
+  125  git switch javascript-timers
+  126  git status
+  127  git status
+  128  git add javascript-timers
+  129  git status
+  130  git commit -m "Fixed setInterval clearInterval"
+  131  git push origin javascript-timers
+  132  git status
+  133  git switch main
+  134  git pull origin main
+  135  git status
+  136  git pull origin main
+  137  git branch http-messages
+  138  git branch --list
+  139  git switch branch http-messages
+  140  git switch http-messages
+  141  git status
+  142  http --help
+  143  http https://example.com
+  144  http --verbose https://example.com
+  145  http --verbose https://example.com
+  146  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+  147  http --body GET https://example.com > http-messages/index.html
+  148  git status
+  149  git add http-messages
+  150  git status
+  151  git commit -m "Completed http-messages"
+  152  git status
+  153  git push origin http-messages
+  154  git status
+  155  git status
+  156  git switch main
+  157  git status
+  158  git status
+  159  git pull origin main
+  160  git status
+  161  git branch javascript-ajax
+  162  git branch --listr
+  163  git branch --list
+  164  git switch javascript-ajax
+  165  git status
+  166  git status
+  167  git add javascript-ajax
+  168  git status
+  169  git commit -m "Completed javascript-ajax"
+  170  git status
+  171  git push origin javacript-ajax
+  172  git push origin javacript-ajax
+  173  git status
+  174  git push origin javascript-ajax
+  175  http https://api.edamam.com/api/recipes/v2 q=='chicken'
+  176  http https://api.jikan.moe/v4/anime letter=='samurai champloo'
+  177  http https://api.jikan.moe/v4/genres/anime filter=='action'
+  178  http https://api.jikan.moe/v4/genres/anime 
+  179  http https://api.jikan.moe/v4/genres/anime filter=='them'
+  180  http https://api.jikan.moe/v4/genres/anime filter=='genres'
+  181  https://api.jikan.moe/v4/anime genres== 1
+  182  https://api.jikan.moe/v4/anime genres== '1'
+  183  http https://api.jikan.moe/v4/genres/anime filter=='genres'
+  184  https://api.jikan.moe/v4/anime genres== 1
+  185  https://api.jikan.moe/v4/anime genres== '1'
+  186  https://api.jikan.moe/v4/anime page==1
+  187  https://api.jikan.moe/v4/anime score==8
+  188  https://api.jikan.moe/v4/anime type=='tv'
+  189  https://api.jikan.moe/v4/anime type=='anime_search_query_tv'
+  190  https://api.jikan.moe/v4/anime order_by=='mal_id'
+  191  https://api.jikan.moe/v4/anime/
+  192  http https://api.jikan.moe/v4/genres/anime type=='tv'
+  193  http https://api.jikan.moe/v4/genres/anime genres=='1'
+  194  http https://api.jikan.moe/v4/genres/anime genres==1
+  195  http https://api.jikan.moe/v4/genres/anime type=='ova'
+  196  http https://api.jikan.moe/v4/genres/anime page==1
+  197  http https://api.jikan.moe/v4/genres/anime score==8
+  198  http https://api.jikan.moe/v4/anime genres==1
+  199  http https://api.jikan.moe/v4/anime start_date==2022
+  200  http https://api.jikan.moe/v4/anime start_date==2022 per_page==50
+  201  http https://api.jikan.moe/v4/anime start_date==2022 page==2
+  202  http https://api.jikan.moe/v4/anime start_date==2022 page==45
+  203  http https://api.jikan.moe/v4/anime genres==action page==45
+  204  http https://api.jikan.moe/v4/anime genres==1 page==1
+  205  http https://api.jikan.moe/v4/anime letter=='samurai champloo'
+  206  http https://api.jikan.moe/v4/anime genres==1 limit==1
+  207  http https://api.jikan.moe/v4/anime genres==1 limit==21
+  208  http https://api.jikan.moe/v4/anime genres==1 limit==2
+  209  http https://api.jikan.moe/v4/anime letter=='chainsaw man'
+  210  http https://api.jikan.moe/v4/anime/1
+  211  https://api.jikan.moe/v4/genres/anime filter=='action'
+  212  http https://api.jikan.moe/v4/genres/anime filter=='action'
+  213  http https://api.jikan.moe/v4/genres/anime filter=='themes'
+  214  http https://api.jikan.moe/v4/genres/anime filter==1
+  215  http https://api.jikan.moe/v4/anime/2
+  216  http https://api.jikan.moe/v4/anime/3
+  217  http https://api.jikan.moe/v4/anime/54
+  218  http https://api.jikan.moe/v4/anime/1/streaming
+  219  http https://api.jikan.moe/v4/anime letter=='chainsaw man'
+  220  http https://api.jikan.moe/v4/anime/44511/streaming
+  221  http https://api.jikan.moe/v4/anime letter=='one piece'
+  222  http https://api.jikan.moe/v4/anime letter=='mob psycho'
+  223  http https://api.jikan.moe/v4/anime letter=='samurai champloo'
+  224  http https://api.jikan.moe/v4/anime letter=='one piece'
+  225  http https://api.jikan.moe/v4/anime letter=='mob psycho'
+  226  http --verbose https://api.jikan.moe/v4/anime letter=='mob psycho 100'
+  227  http --verbose https://api.jikan.moe/v4/anime/32182
+  228  http --verbose https://api.jikan.moe/v4/anime letter=='mob psycho 100 III'
+  229  http --verbose https://api.jikan.moe/v4/anime letter=='mob psycho 100 III'
+  230  http https://api.jikan.moe/v4/anime letter=='samurai champloo'
+  231  git status
+  232  git pull origin main
+  233  git branch --list
+  234  git status
+  235  git branch es6-const-let
+  236  git status
+  237  git switch es6-const-let
+  238  git status
+  239  git status
+  240  git add es6-const-let
+  241  git status
+  242  git commit -m "Completed es6-const-let"
+  243  git status
+  244  git push origin es6-const-let
+  245  git switch main
+  246  git status
+  247  git pull origin main
+  248  git status
+  249  git status
+  250  git branch es6-template-literals
+  251  git branch --list
+  252  git switch es6-template-literals
+  253  git status
+  254  git status
+  255  git status
+  256  git add es6-template-literals
+  257  git status
+  258  git commit -m "Completed es6-template-literals"
+  259  git push origin es6-template-literals
+  260  git status
+  261  git switch main
+  262  git status
+  263  git switch es6-template-literals
+  264  git status
+  265  git commit -m "Completed es6-template-literals"
+  266  git add es6-template-literals
+  267  git status
+  268  git commit -m "Completed es6-template-literals"
+  269  git push origin es6-template-literals
+  270  git status
+  271  git switch main
+  272  git status
+  273  pull origin main
+  274  git pull origin main
+  275  git status
+  276  git pull origin main
+  277  git branch es6-destructuring
+  278  git branch --list
+  279  git switch es6-destructuring
+  280   git status
+  281  git add es6-destructuring
+  282  git status
+  283  git commit -m "Completed es6-destructuring"
+  284  git status
+  285  git push origin es6-destructuring
+  286  git status
+  287  git status
+  288  git switch main
+  289  git status
+  290  git branch es6-arrow-functions
+  291  git branch --list
+  292  git switch es6-arrow-functions
+  293  git status
+  294  git status
+  295  git add es6-arrow-functions
+  296  git status
+  297  git commit -m "Completed es6-arrow-functions"
+  298  git status
+  299  git push origin es6-arrow-functions
+  300  git status
+  301  git switch main
+  302  git status
+  303  git pull origin main
+  304  git branch command-line-basics
+  305  git switch command-line-basics
+  306  git status
+  307  cd command-line-basics
+  308  man
+  309  man man
+  310  man cat
+  311  cat laziness.txt
+  312  cat impatience.txt
+  313  cat hubris.txt
+  314  man cat
+  315  cat laziness.txt impatience.txt hubris.txt
+  316  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  317  cat three-virtues.txt
+  318  man ls
+  319  man ls
+  320  ls
+  321  ls -a
+  322  mna ls
+  323  man ls
+  324  ls -F
+  325  ls lfz-staff/
+  326  ls lfz-staff/ -a
+  327  ls lfz-staff/ -F
+  328  ls -aF lfz-staff > lfz-staff/contents.txt
+  329  cat lfz-staff/contents.txt
+  330  man pwd
+  331  pwd
+  332  pwd  > i-was-here.txt
+  333  man echo
+  334  echo 'Hello, World!'
+  335  echo 'Hello, World!' > hello.txt
+  336  ls
+  337  cat hello.txt
+  338  man touch
+  339  touch tag-youre-it.txt
+  340  touch snoot/boop.txt
+  341  ls snoot/
+  342  ls snoot
+  343  man mkdir
+  344  mkdir parent
+  345  ls parent
+  346  ls parent/
+  347  mkdir -p parent/child/grandchild
+  348  touch parent/child/grandchild/.gitkeep
+  349  ls -a parent
+  350  ls -a parent/
+  351  ls -a parent/child/grandchild
+  352  man mv
+  353  man mv
+  354  man pokiemans pokemon
+  355  mv pokiemans pokemon
+  356  ls
+  357  man rm
+  358  rm lol.txt
+  359  ls lol.txt
+  360  rm -r kill-me/
+  361  ls kill-me
+  362  man cp
+  363  man cp
+  364  cp and-then.txt no-and-then.txt
+  365  ls and-then.txt
+  366  ls no-and-then.txt
+  367  man history
+  368  history
+  369  history > command-history.txt
