@@ -36,3 +36,13 @@ if (myArgs[0] === 'delete') {
     if (err) throw err;
   });
 }
+
+// update an existing note by its id
+if (myArgs[0] === 'update') {
+  parsedNotes[myArgs[1]] = myArgs[2];
+  json.notes = parsedNotes;
+  const jsonStringify = JSON.stringify(json, null, 2);
+  fs.writeFile('data.json', jsonStringify, err => {
+    if (err) throw err;
+  });
+}
