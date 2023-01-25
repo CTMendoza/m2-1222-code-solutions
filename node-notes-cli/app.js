@@ -26,3 +26,13 @@ if (myArgs[0] === 'create') {
   });
   // console.log(JSON.stringify(json, null, 2), `parsedNextId increments to: ${parsedNextId}`);
 }
+
+// deletes an existing a note based on it's id
+if (myArgs[0] === 'delete') {
+  delete parsedNotes[myArgs[1]];
+  json.notes = parsedNotes;
+  const jsonStringify = JSON.stringify(json, null, 2);
+  fs.writeFile('data.json', jsonStringify, err => {
+    if (err) throw err;
+  });
+}
