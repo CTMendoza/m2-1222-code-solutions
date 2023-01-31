@@ -23,13 +23,12 @@ const grades = {
   }
 };
 
-const newArray = [];
-
-for (const prop in grades) {
-  newArray.push(grades[prop]);
-}
-
 app.get('/api/grades', (req, res) => {
+  const newArray = [];
+
+  for (const prop in grades) {
+    newArray.push(grades[prop]);
+  }
   res.json(newArray);
 });
 
