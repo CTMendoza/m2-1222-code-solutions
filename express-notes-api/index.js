@@ -6,19 +6,20 @@ const app = express();
 const exJSON = express.json();
 const fs = require('fs');
 app.use(exJSON);
-const notesArray = [];
+let notesArray = [];
 
 app.get('/api/notes', (req, res) => {
   for (const prop in parsedNotes) {
     notesArray.push(parsedNotes[prop]);
   }
   res.status(200).json(notesArray);
+  notesArray = [];
 });
 
 app.get('/api/notes/:id', (req, res) => {
   const errObj = { error: `cannot find note with id ${req.params.id}` };
   // if client uses an id that is not a positive integer, return status 400 and errObj
-  if (req.params.id <= 0 || isNaN(req.params.id)) {
+  if (req.params.id <= -1 || isNaN(req.params.id)) {
     const errObj = { error: 'id must be a positive integer' };
     return res.status(400).json(errObj);
   }
@@ -53,6 +54,11 @@ app.post('/api/notes', (req, res) => {
         return res.status(500).json(errObj);
       } else {
         res.status(201).json(parsedNotes[parsedNextId++]);
+        json.nextId = parsedNextId;
+        const nexIdStringify = JSON.stringify(json, null, 2);
+        fs.writeFile('data.json', nexIdStringify, err => {
+          if (err) throw err;
+        });
       }
     });
   }
@@ -61,7 +67,7 @@ app.post('/api/notes', (req, res) => {
 app.delete('/api/notes/:id', (req, res) => {
   const errObj = { error: `'cannot find note with id ${req.params.id} ` };
   // if client uses an id that is not a positive integer, return status 400 and errObj
-  if (req.params.id <= 0 || isNaN(req.params.id)) {
+  if (req.params.id <= -1 || isNaN(req.params.id)) {
     const errObj = { error: 'id must be a positive integer' };
     return res.status(400).json(errObj);
   }
@@ -88,7 +94,7 @@ app.delete('/api/notes/:id', (req, res) => {
 
 app.put('/api/notes/:id', (req, res) => {
   // if client uses an id that is not a positive integer, return status 400 and errObj OR they do not include a content property
-  if (req.params.id <= 0 || isNaN(req.params.id)) {
+  if (req.params.id <= -1 || isNaN(req.params.id)) {
     const errObj = { error: 'id must be a positive integer' };
     return res.status(400).json(errObj);
   } else if (!req.body.content) {
