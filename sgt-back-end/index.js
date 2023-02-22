@@ -44,7 +44,7 @@ app.post('/api/grades', (req, res, next) => {
   }
   // create query to insert new row based on req.body key values
   const sql = `
-    INSERT INTO "grade" ("name", "course", "score")
+    INSERT INTO "grades" ("name", "course", "score")
     VALUES($1, $2, $3)
     RETURNING *;
   `;
