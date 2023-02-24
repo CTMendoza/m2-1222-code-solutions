@@ -64,10 +64,10 @@ app.post('/api/grades', (req, res, next) => {
 
 app.put('/api/grades/:gradeId', (req, res) => {
   // 400 because the client may supply an invalid gradeId or invalid/missing name, course, or score
-  if (req.params.gradeId <= 0 || isNaN(req.params.gradeId)) {
+  if (!Number.isInteger(req.params.gradeId) || !('gradeId' in req.params) || req.params.gradeId <= 0 || isNaN(req.params.gradeId)) {
     const errObj = { error: 'id must be a positive integer' };
     return res.status(400).json(errObj);
-  } else if (!req.body || !req.body.name || !req.body.course || !req.body.score) {
+  } else if (!req.body || !req.body.name || !req.body.course || !('score' in req.body)) {
     const errObj = { error: 'missing all or some of name, course, score query parameters' };
     return res.status(400).json(errObj);
   } else if (typeof req.body.name !== 'string' || typeof req.body.course !== 'string') {
@@ -108,7 +108,7 @@ app.put('/api/grades/:gradeId', (req, res) => {
 
 app.delete('/api/grades/:gradeId', (req, res) => {
   // 400 the client may supply an invalid gradeId
-  if (req.params.gradeId <= -1 || isNaN(req.params.gradeId)) {
+  if (!Number.isInteger(req.params.gradeId) || !('gradeId' in req.params) || req.params.gradeId <= -1 || isNaN(req.params.gradeId)) {
     const errObj = { error: 'id must be a positive integer' };
     return res.status(400).json(errObj);
   }
