@@ -35,10 +35,10 @@ ORDER BY "gradeId" ASC;
 // The client should receive and object, not an array
 app.post('/api/grades', (req, res, next) => {
   // status 400 if client supplies an invalid grade, including a missing name, course or score.
-  if (!req.body || !req.body.name || !req.body.course || !req.body.score) {
+  if (!req.body || !req.body.name || !req.body.course || !('score' in req.body)) {
     const errObj = { error: 'missing all or some of name, course, score query parameters' };
     return res.status(400).json(errObj);
-  } else if (req.body.score < 0 || req.body.score > 100 || isNaN(req.body.score)) { // Or score isnt an integer from 0 to 10
+  } else if (!Number.isInteger(req.body.score) || req.body.score < 0 || req.body.score > 100 || isNaN(req.body.score)) { // Or score isnt an integer from 0 to 10
     const errObj = { error: 'score value is not an integer from 0 to 100 or is NaN' };
     return res.status(400).json(errObj);
   }
